@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block {
+            display: flex;
+            margin: 0;
+            position: relative;
+            width: 600px;
+            height: 200px;
+        }
+
+        .text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 0px;
+            height: 200px;
+        }
+
+        .leftSide,
+        .rightSide {
+            display: inline-block;
+            margin: 0;
+            width: 300px;
+            height: 200px;
+            position: relative;
+            background: purple;
+            clip-path: polygon(0% 0%, 100.00% 0.00%, 100% 100%, 0.00% 100.00%);
+
+        }
+
+        .block:hover .leftSide {
+            clip-path: polygon(0% 0%, 70.00% 20.00%, 70% 70%, 0.00% 100.00%);
+            transition: all 2s;
+        }
+
+        .block:hover .rightSide {
+            clip-path: polygon(30% 20%, 100% 0%, 100% 100%, 30% 70%);
+            transition: all 2s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="block">
+        <div class="leftSide"></div>
+        <div class="text">Hello</div>
+        <div class="rightSide"></div>
+    </div>
+</body>
+
+</html>
