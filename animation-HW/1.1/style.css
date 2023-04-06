@@ -1,0 +1,111 @@
+.hasy {
+    /* Круг для часов */
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 5em;
+    border: 4px solid #3e6361;
+    border-radius: 50%;
+    background-color: #69e2de;
+}
+
+.minutes {
+    /* Минутная стрелка */
+    position: absolute;
+    /*Позиционируем относительно .hasy */
+    width: 3px;
+    /* Толщина стрелки */
+    height: 70px;
+    /* Длина стрелки */
+    left: 100px;
+    /*Положение стрелки*/
+    top: 27px;
+    background: #d056d4;
+    animation: now 1600s infinite steps(1600);
+    /* Скорость и движение стрелки */
+    transform-origin: 0 69px;
+    /* Точка относительно которой вращается стрелка */
+}
+
+.has {
+    position: absolute;
+    width: 4px;
+    height: 56px;
+    left: 98px;
+    top: 35px;
+    background: #963899;
+    animation: nov 43200s infinite steps(43200);
+    transform-origin: 0 56px;
+}
+
+.sekundes {
+    position: absolute;
+    width: 2px;
+    height: 90px;
+    left: 100px;
+    top: 11px;
+    background: #c562c9;
+    animation: nev 60s infinite steps(60);
+    transform-origin: 0 89px;
+}
+
+@keyframes nev {
+    100% {
+        transform: rotate(360deg);
+        /* Стрелка делает полный круг */
+    }
+}
+
+@keyframes nov {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes now {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.onen,
+.threen,
+.sixn,
+.ninen {
+    /* Цифры на циферблате */
+    position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+    color: #91249b;
+}
+
+.onen {
+    top: 6px;
+    left: 92px;
+}
+
+.threen {
+    top: 91px;
+    left: 180px;
+}
+
+.sixn {
+    top: 171px;
+    left: 96px;
+}
+
+.ninen {
+    top: 91px;
+    left: 10px;
+}
+
+.sentr {
+    /* Центр циферблата */
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 89px;
+    left: 93px;
+    background: #6b0a74;
+}
